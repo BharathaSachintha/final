@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>MEDICARE</title>
+    <meta name="viewport" content="width=device-width" />
+    <script src="https://unpkg.com/jquery"></script>
+    <script src="https://unpkg.com/survey-jquery@1.8.63/survey.jquery.min.js"></script>
+    <link href="https://unpkg.com/survey-core@1.8.63/modern.min.css" type="text/css" rel="stylesheet" />
+    <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+    <div id="surveyElement" style="display:inline-block;width:100%;"></div>
+    <div id="surveyResult"></div>
+
+
+    <script>
+        Survey
+            .StylesManager
+            .applyTheme("modern");
+
+        var json = {
+            questions: [
+                {
+                    "type": "boolean",
+                    "name": "q1",
+                    "title": "Please answer the question",
+                    "label": "Hemiparesis",
+                    "isRequired": true
+                },
+                {
+                    "type": "boolean",
+                    "name": "q2",
+                    "title": "Please answer the question",
+                    "label": "Sudden weaknesses of face legs and arms",
+                    "isRequired": true
+                },
+                {
+                    "type": "boolean",
+                    "name": "q3",
+                    "title": "Please answer the question",
+                    "label": "Sudden Onset headache",
+                    "isRequired": true
+                },
+                {
+                    "type": "boolean",
+                    "name": "q4",
+                    "title": "Please answer the question",
+                    "label": "Sudden Trouble Speaking ",
+                    "isRequired": true
+                },
+                {
+                    "type": "boolean",
+                    "name": "q5",
+                    "title": "Please answer the question",
+                    "label": "Sudden Trouble walking",
+                    "isRequired": true
+                },
+                {
+                    "type": "boolean",
+                    "name": "q6",
+                    "title": "Please answer the question",
+                    "label": "Sudden onset of chest pain",
+                    "isRequired": true
+                },
+                {
+                    "type": "boolean",
+                    "name": "q7",
+                    "title": "Please answer the question",
+                    "label": "Acute onset",
+                    "isRequired": true
+                },
+                {
+                    "type": "boolean",
+                    "name": "q8",
+                    "title": "Please answer the question",
+                    "label": "Shortness of breath",
+                    "isRequired": true
+                },
+                {
+                    "type": "boolean",
+                    "name": "q9",
+                    "title": "Please answer the question",
+                    "label": "palpitation",
+                    "isRequired": true
+                },
+                {
+                    "type": "boolean",
+                    "name": "q10",
+                    "title": "Please answer the question",
+                    "label": "pain radiates to left jaw",
+                    "isRequired": true
+                },
+                {
+                    "type": "boolean",
+                    "name": "q11",
+                    "title": "Please answer the question",
+                    "label": "unhealing ulcer",
+                    "isRequired": true
+                },
+                {
+                    "type": "boolean",
+                    "name": "q12",
+                    "title": "Please answer the question",
+                    "label": "pain in leg while walking ",
+                    "isRequired": true
+                },
+                {
+                    "type": "boolean",
+                    "name": "q13",
+                    "title": "Please answer the question",
+                    "label": "pain reduce with shor rest",
+                    "isRequired": true
+                },
+                {
+                    "type": "boolean",
+                    "name": "q14",
+                    "title": "Please answer the question",
+                    "label": "Reduce or increase urine output",
+                    "isRequired": true
+                },
+                {
+                    "type": "boolean",
+                    "name": "q15",
+                    "title": "Please answer the question",
+                    "label": "frothy urine",
+                    "isRequired": true
+                },
+                {
+                    "type": "boolean",
+                    "name": "q16",
+                    "title": "Please answer the question",
+                    "label": "lost of sensation in foots",
+                    "isRequired": true
+                },
+                {
+                    "type": "boolean",
+                    "name": "q17",
+                    "title": "Please answer the question",
+                    "label": "painless injuries",
+                    "isRequired": true
+                },
+                {
+                    "type": "boolean",
+                    "name": "q18",
+                    "title": "Please answer the question",
+                    "label": "visual disturbances",
+                    "isRequired": true
+                },
+                {
+                    "type": "boolean",
+                    "name": "q19",
+                    "title": "Please answer the question",
+                    "label": "reduce visual acuity",
+                    "isRequired": true
+                },
+                {
+                    "type": "boolean",
+                    "name": "q20",
+                    "title": "Please answer the question",
+                    "label": "Blur vision",
+                    "isRequired": true
+                },
+                {
+                    "type": "boolean",
+                    "name": "q21",
+                    "title": "Please answer the question",
+                    "label": "eye pain",
+                    "isRequired": true
+                },
+                {
+                    "type": "boolean",
+                    "name": "q22",
+                    "title": "Please answer the question",
+                    "label": "gradually worsening vision",
+                    "isRequired": true
+                },
+                {
+                    "type": "boolean",
+                    "name": "q23",
+                    "title": "Please answer the question",
+                    "label": "High blood sugur",
+                    "isRequired": true
+                },
+                {
+                    "type": "boolean",
+                    "name": "q24",
+                    "title": "Please answer the question",
+                    "label": "Weight Lost ",
+                    "isRequired": true
+                },
+                {
+                    "type": "boolean",
+                    "name": "q25",
+                    "title": "Please answer the question",
+                    "label": "Vomiting",
+                    "isRequired": true
+                },
+                {
+                    "type": "boolean",
+                    "name": "q26",
+                    "title": "Please answer the question",
+                    "label": "Confusion",
+                    "isRequired": true
+                },
+                {
+                    "type": "boolean",
+                    "name": "q27",
+                    "title": "Please answer the question",
+                    "label": "Breathing rate",
+                    "isRequired": true
+                },
+                {
+                    "type": "boolean",
+                    "name": "q28",
+                    "title": "Please answer the question",
+                    "label": "lethergy",
+                    "isRequired": true
+                },
+                {
+                    "type": "boolean",
+                    "name": "q29",
+                    "title": "Please answer the question",
+                    "label": "Faintiness",
+                    "isRequired": true
+                },
+                {
+                    "type": "boolean",
+                    "name": "q30",
+                    "title": "Please answer the question",
+                    "label": "low blood sugur",
+                    "isRequired": true
+                },
+                {
+                    "type": "boolean",
+                    "name": "q31",
+                    "title": "Please answer the question",
+                    "label": "Diplopia",
+                    "isRequired": true
+                },
+                {
+                    "type": "boolean",
+                    "name": "q32",
+                    "title": "Please answer the question",
+                    "label": "sweating",
+                    "isRequired": true
+                },
+            ]
+        };
+
+        window.survey = new Survey.Model(json);
+
+        survey
+
+            .onComplete
+            .add(function (sender) {
+
+                var stokePercentage = 0;
+                var stokeCount = 0;
+                var heartAttackPercentage = 0;
+                var heartAttackCount = 0;
+                var pheripheralVascularDiseasePercentage = 0
+                var pheripheralVascularDiseaseCount = 0
+                var nephopathyPercentage = 0
+                var nephopathyCount = 0
+                var neuropathyPercentage = 0
+                var neuropathyCount = 0
+                var ratinopthyPercentage = 0
+                var ratinopthyCount = 0
+                var hyperglycimiaPercentage = 0
+                var hyperglycimiaCount = 0 
+                var hypoglycimiaPercentage = 0
+                var hypoglycimiaCount = 0
+
+                for (var i = 1; i <= 5; i++) {
+
+                    if (JSON.stringify(sender.data["q" + i + ""]) == "true") {
+                        stokeCount += 1;
+                    }
+                    // if (JSON.stringify(sender.data["q" + i + ""]) == "false") {
+                    //     // stokeCount-=1;
+                    // }
+
+                }
+
+                for (var i = 6; i <= 10; i++) {
+                    if (JSON.stringify(sender.data["q" + i + ""]) == "true") {
+                        heartAttackCount += 1;
+                    }
+                }
+
+                for (var i = 11; i <= 13; i++) {
+                    if (JSON.stringify(sender.data["q" + i + ""]) == "true") {
+                        pheripheralVascularDiseaseCount += 1;
+                    }
+                }
+
+                for (var i = 14; i <= 15; i++) {
+                    if (JSON.stringify(sender.data["q" + i + ""]) == "true") {
+                        nephopathyCount += 1;
+                    }
+                }
+
+                for (var i = 16; i <= 17; i++) {
+                    if (JSON.stringify(sender.data["q" + i + ""]) == "true") {
+                        neuropathyCount += 1;
+                    }
+                }
+
+                for (var i = 18; i <= 22; i++) {
+                    if (JSON.stringify(sender.data["q" + i + ""]) == "true") {
+                        ratinopthyCount += 1;
+                    }
+                }
+
+                for (var i = 23; i <= 29; i++) {
+                    if (JSON.stringify(sender.data["q" + i + ""]) == "true") {
+                        hyperglycimiaCount += 1;
+                    }
+                }
+
+                for (var i = 30; i <= 32; i++) {
+                    if (JSON.stringify(sender.data["q" + i + ""]) == "true") {
+                        hypoglycimiaCount += 1;
+                    }
+                }
+
+                stokePercentage = (stokeCount * 100) / 5;
+                heartAttackPercentage = (heartAttackCount * 100) / 5;
+                pheripheralVascularDiseasePercentage = (pheripheralVascularDiseaseCount * 100) / 3;
+                nephopathyPercentage = (nephopathyCount * 100) / 2;
+                neuropathyPercentage = (neuropathyCount * 100) / 2;
+                ratinopthyPercentage = (ratinopthyCount * 100) / 5;
+                hyperglycimiaPercentage = (hyperglycimiaCount * 100) / 7;
+                hypoglycimiaPercentage = (hypoglycimiaCount * 100) / 3;
+
+                if (stokePercentage >= 50) {
+                    alert("you may have some risk of stoke")
+                }
+
+                if (heartAttackPercentage >= 50) {
+                    alert("you may have some risk of heart attack")
+                }
+
+                if (pheripheralVascularDiseasePercentage >= 50) {
+                    alert("you may have some risk of Pheripheral vascular disease")
+                }
+
+                if (nephopathyPercentage >= 50) {
+                    alert("you may have some risk of Nephopathy")
+                }
+
+                if (neuropathyPercentage >= 50) {
+                    alert("you may have some risk of Neuropathy")
+                }
+
+                if (ratinopthyPercentage >= 50) {
+                    alert("you may have some risk of Ratinopthy")
+                }
+
+                if (hyperglycimiaPercentage >= 50) {
+                    alert("you may have some risk of Hyperglycimia")
+                }
+
+                if (hypoglycimiaPercentage >= 50) {
+                    alert("you may have some risk of Hyperglycimia")
+                }
+
+
+
+
+                // alert(JSON.stringify(sender.data["q1"]));
+                // if(JSON.stringify(sender.data["q"+1+""]) == "true"){
+                //     alert("correct");
+                // }
+                // if(JSON.stringify(sender.data["q1"]) == "false"){
+                //     alert("wrong");
+                // }
+
+                // document.querySelector('#surveyResult')
+                //     .textContent = "Result JSON:\n" + JSON.stringify(sender.data, null, 3);
+            }
+            );
+
+        $("#surveyElement").Survey({ model: survey });;
+    </script>
+</body>
+
+</html>

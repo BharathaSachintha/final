@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>MEDICARE</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='vendor/animate.css/animate.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='vendor/aos/aos.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='vendor/bootstrap/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='vendor/bootstrap-icons/bootstrap-icons.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='vendor/boxicons/css/boxicons.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='vendor/glightbox/css/glightbox.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='vendor/remixicon/remixicon.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='vendor/swiper/swiper-bundle.min.css') }}">
+
+    <!-- Template Main CSS File -->
+    <!-- <link href="assets/css/style.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <style>
+        #signupcard {
+            background-color: rgba(0, 0, 0, 0.267);
+            margin-left: 200px;
+            margin: 50px;
+            padding: 50px;
+            width: auto;
+            border-radius: 15px;
+            width: 400px;
+
+        }
+
+        #signupcard label {
+            color: white;
+        }
+
+        .carousel-container h1 {
+            color: black;
+            margin-top: 50px;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <h1 id="loader" style="color: rebeccapurple;  position: relative;  z-index: 99; display: none;">Please Wait...</h1>
+    <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top">
+        <div class="container d-flex align-items-center">
+            <img style="width: 39px;" id="logoimageid" src="../static/img/logo.png" alt="">
+            <h1 class="logo me-auto"><a href="index.html"><span>MEDI</span>CARE
+                </a></h1>
+
+
+            <nav id="navbar" class="navbar order-last order-lg-0">
+                <ul>
+                    <li><a href="{{url_for('index')}}">Home</a></li>
+                    <li><a href="{{url_for('signup')}}"  class="active">Signup</a></li>
+                    <li><a id="loginli" href="{{url_for('login')}}">Login</a></li>
+                    <li><a id="test1li" href="{{url_for('directrecords')}}">Prediction</a></li>
+                    <li><a id="meeturlidx" href="{{url_for('meet')}}">Analyzing</a></li>
+                    <!-- <li><a id="questionaireurlid" href="{{url_for('questionaire')}}">Answering</a></li> -->
+                    <li><a  id="historyli" href="{{url_for('history')}}">History</a></li>
+
+                </ul>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav><!-- .navbar -->
+        </div>
+    </header><!-- End Header -->
+
+    <!-- ======= Hero Section ======= -->
+    <section id="hero">
+        <div id="heroCarousel" data-bs-interval="5000" class="carousel slide carousel-fade" data-bs-ride="carousel">
+
+            <div class="carousel-inner" role="listbox">
+
+                <!-- Slide 1 -->
+                <div class="carousel-item active" style="background-image: url(static/img/mb.jpg);">
+                    <div class="carousel-container">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h1 style="color: black;">Be Your Doctor Yourself <br>
+                                        With Medicare</h1>
+                                    <p style="color: black;">MediCare connects Disease Diagnosing, qualified Doctors, & Medical  Records for your convenience. Everything has been connected now at your fingertips and use MediCare for all your Diabetic based medical needs. We provide a range of services for you connecting the largest medical system in Sri Lanka.</p>
+                                    <button type="submit" class="btn btn-primary">READ MORE</button>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div id="signupcard">
+                                        <form method="POST" action="{{url_for('signup')}}">
+                                            <div class="mb-3">
+                                                <label for="exampleInputEmail1" class="form-label">Username</label>
+                                                <input required type="text" class="form-control"
+                                                    aria-describedby="emailHelp" name="username" id="username">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label class="form-label">Email Address</label>
+                                                <input required type="text" class="form-control"
+                                                    aria-describedby="emailHelp" name="email" id="email">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label class="form-label">Password</label>
+                                                <input required type="text" class="form-control" name="password"
+                                                    id="password">
+                                            </div>
+
+                                            <button id="signupbtn" type="submit"
+                                                class="btn btn-primary">Register</button>
+                                            <div style="color: white;" class="msg">{{ msg }}</div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+
+            <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
+            </a>
+
+            <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
+                <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
+            </a>
+
+            <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
+
+        </div>
+    </section><!-- End Hero -->
+
+
+
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Vendor JS Files -->
+
+    <script src="{{url_for('static', filename='vendor/aos/aos.js')}}"></script>
+    <script src="{{url_for('static', filename='vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+    <script src="{{url_for('static', filename='vendor/glightbox/js/glightbox.min.js')}}"></script>
+    <script src="{{url_for('static', filename='vendor/isotope-layout/isotope.pkgd.min.js')}}"></script>
+    <script src="{{url_for('static', filename='vendor/php-email-form/validate.js')}}"></script>
+    <script src="{{url_for('static', filename='vendor/swiper/swiper-bundle.min.js')}}"></script>
+    <script src="{{url_for('static', filename='vendor/waypoints/noframework.waypoints.js')}}"></script>
+
+    <!-- Template Main JS File -->
+
+    <script src="{{url_for('static', filename='js/main.js')}}"></script>
+
+    <script>
+        if (!sessionStorage.getItem('username') == '') {
+            //   document.getElementById("usernametagid").innerHTML = "Hello " + sessionStorage.getItem("username") + ","
+
+            document.getElementById('loginli').innerHTML = "Logout"
+            document.getElementById('loginli').href = "{{url_for('logout')}}"
+            document.getElementById('test1li').href = "{{url_for('directrecords')}}"
+            document.getElementById('givingdirectrecords').href = "{{url_for('directrecords')}}"
+
+            document.getElementById('trynowbtn').href = "{{url_for('directrecords')}}"
+            document.getElementById('givingdirectrecords').href = "{{url_for('directrecords')}}"
+            document.getElementById('answeringquestionaire').href = "{{url_for('doctors')}}"
+            document.getElementById('historyli').href = "{{url_for('history')}}"
+            document.getElementById('meeturlidx').href = "{{url_for('meet')}}"
+            document.getElementById('questionaireurlid').href = "{{url_for('questionaire')}}"
+
+        }
+        if (sessionStorage.getItem('username') == '') {
+            document.getElementById('loginli').innerHTML = "Login"
+            document.getElementById('loginli').href = "{{url_for('login')}}"
+            document.getElementById('test1li').href = "{{url_for('login')}}"
+            document.getElementById('historyli').href = "{{url_for('login')}}"
+            document.getElementById('meeturlidx').href = "{{url_for('login')}}"
+            document.getElementById('questionaireurlid').href = "{{url_for('login')}}"
+        }
+    </script>
+
+</body>
+
+</html>

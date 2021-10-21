@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>MEDICARE</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <!-- <link href="img/favicon.png" rel="icon"> -->
+    <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Vendor CSS Files -->
+    <!-- <link href="vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="vendor/aos/aos.css" rel="stylesheet">
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="vendor/swiper/swiper-bundle.min.css" rel="stylesheet"> -->
+
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='vendor/animate.css/animate.min.css') }}"> -->
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='vendor/aos/aos.css') }}"> -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='vendor/bootstrap/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='vendor/bootstrap-icons/bootstrap-icons.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='vendor/boxicons/css/boxicons.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='vendor/glightbox/css/glightbox.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='vendor/remixicon/remixicon.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='vendor/swiper/swiper-bundle.min.css') }}">
+
+    <!-- Template Main CSS File -->
+    <!-- <link href="assets/css/style.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+
+
+    <script src="https://unpkg.com/jquery"></script>
+    <script src="https://unpkg.com/survey-jquery@1.8.63/survey.jquery.min.js"></script>
+    <link href="https://unpkg.com/survey-core@1.8.63/modern.min.css" type="text/css" rel="stylesheet" />
+
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        #surveyElement {
+            margin-top: 2em;
+            padding-left: 4em;
+        }
+
+        #mylot {
+            margin-top: 6em;
+            padding-left: 7em;
+        }
+
+        #con ul {
+            list-style: none;
+            width: 500px;
+        }
+
+        #con ul li {
+            width: 100%;
+            background: #ffffff;
+            height: 40px;
+            line-height: 40px;
+            padding: 0 5px;
+            position: relative;
+            cursor: pointer;
+            display: block;
+            margin: 5px 0;
+            box-shadow: 1px 3px 1px #ececec;
+            transition: 0.5s linear;
+        }
+
+        #con ul li span {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50px;
+            text-align: center;
+            background: #ffffff;
+
+        }
+
+        #headingguide {
+            padding-top: 100px;
+            padding-left: 500px;
+        }
+
+        #bodyguide {
+            padding-top: 50px;
+            padding-left: 600px;
+            padding-bottom: 50px;
+        }
+
+        #txt {
+            width: 300px;
+        }
+
+        .btn {
+            background-color: #ffffff;
+            border: 1px solid #1bbd36;
+            color: #1bbd36;
+            padding: 4px 24px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            transition-duration: 0.3s;
+            border-radius: 25px;
+        }
+
+        .btn:hover {
+            background-color: #4CAF50;
+            /* Green */
+            color: white;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top">
+        <div class="container d-flex align-items-center">
+            <img style="width: 39px;" id="logoimageid" src="../static/img/logo.png" alt="">
+            <h1 class="logo me-auto"><a href="index.html"><span>MEDI</span>CARE
+            </a></h1>
+
+
+            <nav id="navbar" class="navbar order-last order-lg-0">
+                <ul>
+                    <li><a href="{{url_for('index')}}">Home</a></li>
+                    <li><a href="{{url_for('signup')}}">Signup</a></li>
+                    <li><a id="loginli" href="{{url_for('login')}}">Login</a></li>
+                    <li><a id="test1li" href="{{url_for('directrecords')}}">Prediction</a></li>
+                    <li><a id="meeturlid" href="{{url_for('meet')}}" class="active">Analyzing</a></li>
+                    <!-- <li><a id="questionaireurlid" href="{{url_for('questionaire')}}">Answering</a></li> -->
+                    <li><a  id="historyli" href="{{url_for('history')}}">History</a></li>
+
+                </ul>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav><!-- .navbar -->
+        </div>
+    </header><!-- End Header -->
+
+
+
+    <main id="main">
+
+        <h1 id="headingguide">Add Your Five Symptoms Here</h1>
+
+        <div id="bodyguide">
+            <form>
+
+                <select name="text" id="txt" required>
+                    <option value="back_pain">back_pain</option>
+                    <option value="constipation">constipation</option>
+                    <option value="abdominal_pain">abdominal_pain</option>
+                    <option value="diarrhoea">diarrhoea</option>
+                    <option value="mild_fever">mild_fever</option>
+                    <option value="yellow_urine">yellow_urine</option>
+                    <option value="yellowing_of_eyes">yellowing_of_eyes</option>
+                    <option value="acute_liver_failure">acute_liver_failure</option>
+                    <option value="fluid_overload">fluid_overload</option>
+                    <option value="swelling_of_stomach">swelling_of_stomach</option>
+                    <option value="swelled_lymph_nodes">swelled_lymph_nodes</option>
+                    <option value="malaise">malaise</option>
+                    <option value="blurred_and_distorted_vision">blurred_and_distorted_vision</option>
+                    <option value="phlegm">phlegm</option>
+                    <option value="throat_irritation">throat_irritation</option>
+                    <option value="redness_of_eyes">redness_of_eyes</option>
+                    <option value="sinus_pressure">sinus_pressure</option>
+                    <option value="runny_nose">runny_nose</option>
+                    <option value="congestion">congestion</option>
+                    <option value="chest_pain">chest_pain</option>
+                    <option value="weakness_in_limbs">weakness_in_limbs</option>
+                    <option value="fast_heart_rate">fast_heart_rate</option>
+                    <option value="pain_during_bowel_movements">pain_during_bowel_movements</option>
+                    <option value="pain_in_anal_region">pain_in_anal_region</option>
+                    <option value="bloody_stool">bloody_stool</option>
+                    <option value="irritation_in_anus">irritation_in_anus</option>
+                    <option value="neck_pain">neck_pain</option>
+                    <option value="dizziness">dizziness</option>
+                    <option value="cramps">cramps</option>
+                    <option value="bruising">bruising</option>
+                    <option value="obesity">obesity</option>
+                    <option value="swollen_legs">swollen_legs</option>
+                    <option value="swollen_blood_vessels">swollen_blood_vessels</option>
+                    <option value="puffy_face_and_eyes">puffy_face_and_eyes</option>
+                    <option value="enlarged_thyroid">enlarged_thyroid</option>
+                    <option value="brittle_nails">brittle_nails</option>
+                    <option value="swollen_extremeties">swollen_extremeties</option>
+                    <option value="excessive_hunger">excessive_hunger</option>
+                    <option value="extra_marital_contacts">extra_marital_contacts</option>
+                    <option value="drying_and_tingling_lips">drying_and_tingling_lips</option>
+                    <option value="slurred_speech">slurred_speech</option>
+                    <option value="knee_pain">knee_pain</option>
+                    <option value="hip_joint_pain">hip_joint_pain</option>
+                    <option value="muscle_weakness">muscle_weakness</option>
+                    <option value="stiff_neck">stiff_neck</option>
+                    <option value="swelling_joints">swelling_joints</option>
+                    <option value="movement_stiffness">movement_stiffness</option>
+                    <option value="spinning_movements">spinning_movements</option>
+                    <option value="loss_of_balance">loss_of_balance</option>
+                    <option value="unsteadiness">unsteadiness</option>
+                    <option value="weakness_of_one_body_side">weakness_of_one_body_side</option>
+                    <option value="loss_of_smell">loss_of_smell</option>
+                    <option value="bladder_discomfort">bladder_discomfort</option>
+                    <option value="foul_smell_of urine">foul_smell_of urine</option>
+                    <option value="continuous_feel_of_urine">continuous_feel_of_urine</option>
+                    <option value="passage_of_gases">passage_of_gases</option>
+                    <option value="internal_itching">internal_itching</option>
+                    <option value="toxic_look_(typhos)">toxic_look_(typhos)</option>
+                    <option value="depression">depression</option>
+                    <option value="irritability">irritability</option>
+                    <option value="muscle_pain">muscle_pain</option>
+                    <option value="altered_sensorium">altered_sensorium</option>
+                    <option value="red_spots_over_body">red_spots_over_body</option>
+                    <option value="belly_pain">belly_pain</option>
+                    <option value="abnormal_menstruation">abnormal_menstruation</option>
+                    <option value="dischromic _patches">dischromic _patches</option>
+                    <option value="watering_from_eyes">watering_from_eyes</option>
+                    <option value="increased_appetite">increased_appetite</option>
+                    <option value="polyuria">polyuria</option>
+                    <option value="family_history">family_history</option>
+                    <option value="mucoid_sputum">mucoid_sputum</option>
+                    <option value="rusty_sputum">rusty_sputum</option>
+                    <option value="lack_of_concentration">lack_of_concentration</option>
+                    <option value="visual_disturbances">visual_disturbances</option>
+                    <option value="receiving_blood_transfusion">receiving_blood_transfusion</option>
+                    <option value="receiving_unsterile_injections">receiving_unsterile_injections</option>
+                    <option value="coma">coma</option>
+                    <option value="stomach_bleeding">stomach_bleeding</option>
+                    <option value="distention_of_abdomen">distention_of_abdomen</option>
+                    <option value="history_of_alcohol_consumption">history_of_alcohol_consumption</option>
+                    <option value="fluid_overload">fluid_overload</option>
+                    <option value="blood_in_sputum">blood_in_sputum</option>
+                    <option value="prominent_veins_on_calf">prominent_veins_on_calf</option>
+                    <option value="palpitations">palpitations</option>
+                    <option value="painful_walking">painful_walking</option>
+                    <option value="pus_filled_pimples">pus_filled_pimples</option>
+                    <option value="blackheads">blackheads</option>
+                    <option value="scurring">scurring</option>
+                    <option value="skin_peeling">skin_peeling</option>
+                    <option value="silver_like_dusting">silver_like_dusting</option>
+                    <option value="small_dents_in_nails">small_dents_in_nails</option>
+                    <option value="inflammatory_nails">inflammatory_nails</option>
+                    <option value="blister">blister</option>
+                    <option value="red_sore_around_nose">red_sore_around_nose</option>
+                    <option value="yellow_crust_ooz">yellow_crust_ooz</option>
+                </select>
+                <button type="submit" class="btn-list">
+                    <i class="fa fa-plus" aria-hidden="true"></i>
+                </button>
+            </form>
+
+            <div class="container" id="con">
+                <ul></ul>
+            </div>
+
+            <a href="{{url_for('meet')}}"><button id="meetpredictbtn" type="button"
+                    class="btn btn-success">Predict</button></a>
+                    <a href="{{url_for('doctors')}}"><button id="meetpredictbtn" type="button"
+                        class="btn btn-success">See Doctors</button></a>
+
+
+                     <br><br><h4>You may have <span id="diseaseidtag"></span></h4>
+        </div>
+
+
+        <!-- ======= Services Section ======= -->
+        <section id="services" class="services section-bg">
+            <div class="container" data-aos="fade-up">
+
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="icon-box iconbox-blue">
+                            <div class="icon">
+                                <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke="none" stroke-width="0" fill="#f5f5f5"
+                                        d="M300,541.5067337569781C382.14930387511276,545.0595476570109,479.8736841581634,548.3450877840088,526.4010558755058,480.5488172755941C571.5218469581645,414.80211281144784,517.5187510058486,332.0715597781072,496.52539010469104,255.14436215662573C477.37192572678356,184.95920475031193,473.57363656557914,105.61284051026155,413.0603344069578,65.22779650032875C343.27470386102294,18.654635553484475,251.2091493199835,5.337323636656869,175.0934190732945,40.62881213300186C97.87086631185822,76.43348514350839,51.98124368387456,156.15599469081315,36.44837278890362,239.84606092416172C21.716077023791087,319.22268207091537,43.775223500013084,401.1760424656574,96.891909868211,461.97329694683043C147.22146801428983,519.5804099606455,223.5754009179313,538.201503339737,300,541.5067337569781">
+                                    </path>
+                                </svg>
+                                <i class="bx bx-tachometer"></i>
+                            </div>
+
+                            <h4><a href="">Giving Direct Records</a></h4>
+                            <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
+                            <div class="text-center"><a id="givingdirectrecords" href="" class="btn-get-started">Try
+                                    Now</a></div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in"
+                        data-aos-delay="200">
+                        <div class="icon-box iconbox-orange ">
+                            <div class="icon">
+                                <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke="none" stroke-width="0" fill="#f5f5f5"
+                                        d="M300,582.0697525312426C382.5290701553225,586.8405444964366,449.9789794690241,525.3245884688669,502.5850820975895,461.55621195738473C556.606425686781,396.0723002908107,615.8543463187945,314.28637112970534,586.6730223649479,234.56875336149918C558.9533121215079,158.8439757836574,454.9685369536778,164.00468322053177,381.49747125262974,130.76875717737553C312.15926192815925,99.40240125094834,248.97055460311594,18.661163978235184,179.8680185752513,50.54337015887873C110.5421016452524,82.52863877960104,119.82277516462835,180.83849132639028,109.12597500060166,256.43424936330496C100.08760227029461,320.3096726198365,92.17705696193138,384.0621239912766,124.79988738764834,439.7174275375508C164.83382741302287,508.01625554203684,220.96474134820875,577.5009287672846,300,582.0697525312426">
+                                    </path>
+                                </svg>
+                                <i class="bx bx-file"></i>
+                            </div>
+                            <h4><a href="">See Doctors</a></h4>
+                            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
+                            <div class="text-center"><a id="answeringquestionaire" href="" class="btn-get-started">Try Now</a></div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0" data-aos="zoom-in"
+                        data-aos-delay="300">
+                        <div class="icon-box iconbox-pink">
+                            <div class="icon">
+                                <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke="none" stroke-width="0" fill="#f5f5f5"
+                                        d="M300,521.0016835830174C376.1290562159157,517.8887921683347,466.0731472004068,529.7835943286574,510.70327084640275,468.03025145048787C554.3714126377745,407.6079735673963,508.03601936045806,328.9844924480964,491.2728898941984,256.3432110539036C474.5976632858925,184.082847569629,479.9380746630129,96.60480741107993,416.23090153303,58.64404602377083C348.86323505073057,18.502131276798302,261.93793281208167,40.57373210992963,193.5410806939664,78.93577620505333C130.42746243093433,114.334589627462,98.30271207620316,179.96522072025542,76.75703585869454,249.04625023123273C51.97151888228291,328.5150500222984,13.704378332031375,421.85034740162234,66.52175969318436,486.19268352777647C119.04800174914682,550.1803526380478,217.28368757567262,524.383925680826,300,521.0016835830174">
+                                    </path>
+                                </svg>
+                                <i class="bx bxl-dribbble"></i>
+                            </div>
+                            <h4><a href="">Giving Symptoms</a></h4>
+                            <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
+                            <div class="text-center"><a id="givingsymptoms" href="" class="btn-get-started">Try Now</a></div>
+                        </div>
+                    </div>
+
+
+
+
+
+                </div>
+
+            </div>
+        </section><!-- End Services Section -->
+
+
+
+
+
+    </main><!-- End #main -->
+
+    <!-- ======= Footer ======= -->
+  <footer id="footer">
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h3>Medical Center</h3>
+            <p>
+              ABC Flex Street <br>
+              Colombo, No123<br>
+              Sri Lanka <br><br>
+              <strong>Phone:</strong> +94719536875<br>
+              <strong>Email:</strong> medicare.Diabetic@gmail.com<br>
+            </p>
+          </div>
+
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Direct Test</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Qustionaire</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Mining</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Histiory</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Our Services</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Differential Diagnosis</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Complication Prediction</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Doctor Assigning</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">My Reports</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Doctor Consulting</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-4 col-md-6 footer-newsletter">
+            <h4>Join Our Clinic</h4>
+            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
+            <form action="" method="post">
+              <input type="email" name="email"><input type="submit" value="Subscribe">
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
+  </footer><!-- End Footer -->
+
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Vendor JS Files -->
+
+
+    <!-- <script src="{{url_for('static', filename='vendor/aos/aos.js')}}"></script> -->
+    <script src="{{url_for('static', filename='vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+    <script src="{{url_for('static', filename='vendor/glightbox/js/glightbox.min.js')}}"></script>
+    <script src="{{url_for('static', filename='vendor/isotope-layout/isotope.pkgd.min.js')}}"></script>
+    <script src="{{url_for('static', filename='vendor/php-email-form/validate.js')}}"></script>
+    <script src="{{url_for('static', filename='vendor/swiper/swiper-bundle.min.js')}}"></script>
+    <script src="{{url_for('static', filename='vendor/waypoints/noframework.waypoints.js')}}"></script>
+
+    <!-- Template Main JS File -->
+
+    <script src="{{url_for('static', filename='js/main.js')}}"></script>
+
+
+   
+
+    <script>
+        var meetli = []
+        const inputText = document.querySelector('#txt');
+        const myButton = document.querySelector('.btn-list');
+        const list = document.querySelector('#con ul');
+        myButton.addEventListener('click', (e) => {
+            if (inputText.value != "") {
+                e.preventDefault();
+
+                const myLi = document.createElement('li');
+                myLi.innerHTML = inputText.value;
+                list.appendChild(myLi);
+                meetli.push(inputText.value);
+
+                const mySpan = document.createElement('span');
+                mySpan.innerHTML = 'x';
+                myLi.appendChild(mySpan);
+            }
+            const close = document.querySelectorAll('span');
+            for (let i = 0; i < close.length; i++) {
+                close[i].addEventListener('click', () => {
+                    meetli.splice(close[i], 1);
+                    close[i].parentElement.style.opacity = 0;
+                    setTimeout(() => {
+                        close[i].parentElement.style.display = "none";
+                    }, 500);
+
+                })
+            }
+            inputText.value = "";
+        });
+    </script>
+
+
+    <script>
+        // l = ['spinning_movements','muscle_weakness','cramps','fluid_overload','mild_fever']
+        const neetpredictbtn = document.querySelector('#meetpredictbtn');
+        neetpredictbtn.addEventListener('click', (e) => {
+
+
+            $.ajax({
+                type: "POST",
+                url: "{{url_for('meet')}}",
+                cache: false,
+                async: false,
+                data: {
+                    li: JSON.stringify(meetli),
+                },
+                success: function (response) {
+                    sessionStorage.setItem('disease', response)
+                },
+            })
+        })
+        document.getElementById('diseaseidtag').innerHTML = sessionStorage.getItem('disease')
+    </script>
+
+<script>
+
+
+
+    if (!sessionStorage.getItem('username') == '') {
+
+
+        document.getElementById('loginli').innerHTML = "Logout"
+        document.getElementById('answeringquestionaire').href = "{{url_for('doctors')}}"
+        document.getElementById('loginli').href = "{{url_for('logout')}}"
+        document.getElementById('test1li').href = "{{url_for('directrecords')}}"
+        document.getElementById('givingdirectrecords').href = "{{url_for('directrecords')}}"
+        document.getElementById('givingsymptoms').href = "{{url_for('meet')}}"
+        document.getElementById('trynowbtn').href = "{{url_for('directrecords')}}"
+        document.getElementById('givingdirectrecords').href = "{{url_for('directrecords')}}"
+        document.getElementById('historyli').href = "{{url_for('history')}}"
+        document.getElementById('meeturlid').href = "{{url_for('meet')}}"
+        document.getElementById('questionaireurlid').href = "{{url_for('questionaire')}}"
+
+    }
+    if (sessionStorage.getItem('username') == '') {
+        document.getElementById('loginli').innerHTML = "Login"
+        document.getElementById('loginli').href = "{{url_for('login')}}"
+        document.getElementById('test1li').href = "{{url_for('login')}}"
+        document.getElementById('givingdirectrecords').href = "{{url_for('login')}}"
+        document.getElementById('givingsymptoms').href = "{{url_for('login')}}"
+        document.getElementById('trynowbtn').href = "{{url_for('login')}}"
+        document.getElementById('givingdirectrecords').href = "{{url_for('login')}}"
+        document.getElementById('answeringquestionaire').href = "{{url_for('login')}}"
+        document.getElementById('historyli').href = "{{url_for('login')}}"
+        document.getElementById('meeturlid').href = "{{url_for('login')}}"
+        document.getElementById('questionaireurlid').href = "{{url_for('login')}}"
+    }
+
+
+
+</script>
+
+</body>
+
+</html>

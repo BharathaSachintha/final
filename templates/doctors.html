@@ -1,0 +1,199 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEDICARE</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<style>
+    
+.btn {
+  background-color: #ffffff;
+  border: 1px solid #1bbd36;
+  color: #1bbd36;
+  padding: 13px 38px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  transition-duration: 0.4s;
+  border-radius: 25px;
+}
+
+.btn:hover {
+  background-color: #4CAF50; /* Green */
+  color: white;
+}
+    h1{
+        padding-top: 50px;
+    }
+.card-wrapper {
+  margin: 5% 0;
+}
+
+/* You can adjust the image size by increasing/decreasing the width, height */
+.custom-circle-image {
+  width: 20vw; /* note i used vw not px for better responsive */
+  height: 20vw;
+}
+
+.custom-circle-image img {
+  object-fit: cover;
+}
+
+.card-title {
+  letter-spacing: 1.1px;
+}
+
+.card-text {
+  font-family: MerriweatherRegular;
+  font-size: 22px;
+  line-height: initial;
+}
+</style>
+<!------ Include the above in your HEAD tag ---------->
+
+</head>
+<body>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" />
+    <section class="about-cards-section">
+      <div class="container">
+<h1>Doctors Recommand For You</h1>
+<a href="{{url_for('index')}}"><button id="backtohomebtn1" type="button" class="btn btn-success">Back To Home</button></a>
+
+
+
+        <div class="row">
+          <div class="col-sm-4 card-wrapper">
+            <div class="card border-0">
+              <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                <img class="w-100 h-100" src="../static/img/doctors/4.jpg" alt="Card image cap">
+              </div>
+              <div class="card-body text-center mt-4">
+                <h3 class="text-uppercase card-title"> Dr Kavinda perera</h3>
+                <p>General physician</p>
+                <p class="card-text">MBBS(col),MD(col)MRCP((UK)MRCP(London) National Hospital Sri Lanka</p>
+                <p>Kavinda2@gmail.com</p>
+                <p>+94770388471</p>
+              </div>
+            </div>
+          </div>
+    
+          <div class="col-sm-4 card-wrapper">
+            <div class="card border-0">
+              <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                <img class="w-100 h-100" src="../static/img/doctors/5.jpg" alt="Card image cap">
+              </div>
+              <div class="card-body text-center mt-4">
+                <h3 class="text-uppercase card-title">Vimukthi Jayasanka</h3>
+                <p>General physician cardiologist</p>
+                <p class="card-text">MBBS,MD,MRCP(UK)MRCP(London) Cardiologist National HospitalSri Lanka</p>
+                <p>Vimukthisj@gmail.com</p>
+                <p>+94774433123</p>
+              </div>
+            </div>
+          </div>
+    
+          <div class="col-sm-4 card-wrapper">
+            <div class="card border-0">
+              <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                <img class="w-100 h-100" src="../static/img/doctors/7.jpg" alt="Card image cap">
+              </div>
+              <div class="card-body text-center mt-4">
+                <h3 class="text-uppercase card-title">Prabhath Solangaarachi</h3>
+                <p>Surgeon</p>
+                <p class="card-text">MBBS(col),MD(col)MRCP((UK)MRCP(London) National Hospital Sri Lanka</p>
+                <p>PrabhathSolangaarachi@gmail.com</p>
+                <p>+94774433123</p>
+              </div>
+            </div>
+          </div>
+    
+        </div>
+
+        <div class="row">
+            <div class="col-sm-4 card-wrapper">
+              <div class="card border-0">
+                <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                  <img class="w-100 h-100" src="../static/img/doctors/1.jpg" alt="Card image cap">
+                </div>
+                <div class="card-body text-center mt-4">
+                  <h3 class="text-uppercase card-title">Udani Nawodya</h3>
+                  <p>Ophthalmologist</p>
+                  <p class="card-text">MBBS(col),MD(col)MRCP((UK)MRCP(London) National Hospital Sri Lanka</p>
+                  <p>UdaniNawodya@gmail.com</p>
+                  <p>+9477788987</p>
+                </div>
+              </div>
+            </div>
+      
+            <div class="col-sm-4 card-wrapper">
+              <div class="card border-0">
+                <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                  <img class="w-100 h-100" src="../static/img/doctors/2.jpg" alt="Card image cap">
+                </div>
+                <div class="card-body text-center mt-4">
+                  <h3 class="text-uppercase card-title">Sujani Jayaweera</h3>
+                  <p>Nephrologis</p>
+                  <p class="card-text">MBBS(col),MD(col)MRCP((UK)MRCP(London) National Hospital Sri Lanka</p>
+                  <p>SujaniJayawardhana@gmail.com</p>
+                  <p>+94774445123</p>
+                </div>
+              </div>
+            </div>
+      
+            <div class="col-sm-4 card-wrapper">
+              <div class="card border-0">
+                <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                  <img class="w-100 h-100" src="../static/img/doctors/4.jpg" alt="Card image cap">
+                </div>
+                <div class="card-body text-center mt-4">
+                  <h3 class="text-uppercase card-title">Jayampath de silva</h3>
+                  <p>General physician</p>
+                  <p class="card-text">MBBS(col),MD(col)MRCP((UK)MRCP(London) National Hospital Sri Lanka</p>
+                  <p>Jayampathdesilva@gmail.com</p>
+                  <p>+94774445456</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-4 card-wrapper">
+                <div class="card border-0">
+                  <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                    <img class="w-100 h-100" src="../static/img/doctors/5.jpg" alt="Card image cap">
+                  </div>
+                  <div class="card-body text-center mt-4">
+                    <h3 class="text-uppercase card-title">Nimishan Eranda</h3>
+                    <p>General physician</p>
+                    <p class="card-text">MBBS(col),MD(col)MRCP((UK)MRCP(London) National Hospital Sri Lanka</p>
+                    <p>NimishanEranda@gmail.com</p>
+                    <p>+94774445789</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-sm-4 card-wrapper">
+                <div class="card border-0">
+                  <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                    <img class="w-100 h-100" src="../static/img/doctors/3.jpg" alt="Card image cap">
+                  </div>
+                  <div class="card-body text-center mt-4">
+                    <h3 class="text-uppercase card-title">Ridhmi pemarathna</h3>
+                    <p>General physician</p>
+                    <p class="card-text">MBBS(col),MD(col)MRCP((UK)MRCP(London) National Hospital Sri Lanka</p>
+                    <p>Ridhmipemarathna@gmail.com</p>
+                    <p>+94774445012</p>
+                  </div>
+                </div>
+              </div>
+      
+          </div>
+      </div>
+    </section>
+</body>
+</html>
